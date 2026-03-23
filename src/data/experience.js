@@ -56,7 +56,7 @@ export const experienceData = [
   {
     id: "egeb",
     company: "Ege Haina Power Plant",
-    subtitle: "Quisqueya II — 12×18V50DF + Turbina a Vapor + Parque Solar 225MW",
+    subtitle: "Quisqueya II & Quisqueya I— 12×18V50DF + Turbina a Vapor + Parque Solar 225MW",
     role: "Eléctrico – Instrumentista B",
     period: "Septiembre 2021 — Diciembre 2022",
     type: "Power Generation",
