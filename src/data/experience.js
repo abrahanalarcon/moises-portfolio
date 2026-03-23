@@ -44,8 +44,13 @@ export const experienceData = [
     ],
     tags: ["SCADA (WOIS)", "DCS", "Modbus TCP/RTU", "Profibus", "PLC-HMI", "Wartsila 50DF", "SAP"],
     photos: [
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format",
-      "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&auto=format",
+        "/public/cfc.jpg",
+      "/public/proteccion-c.jpg",
+      "/public/network.jpeg",
+      "/public/panel.jpg",
+      "/public/sala de control.jpg",
+      "/public/main.jpg",
+      "/public/rampa degas.jpg",
       "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&auto=format",
     ],
   },
@@ -67,9 +72,10 @@ export const experienceData = [
     ],
     tags: ["SCADA", "HMI", "PLC", "Redes Industriales", "Turbinas", "Solar"],
     photos: [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format",
-      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&auto=format",
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&auto=format",
+      "/public/foto de perfil.jpg",
+      "/public/LDU.jpg",
+      "/public/Q1 Q2 poewr plant.jpeg",
+      "/public/con cristofer.jpg",
     ],
   },
   {
@@ -90,9 +96,9 @@ export const experienceData = [
     ],
     tags: ["PLC", "HMI", "Modbus RTU/TCP", "Manufactura", "Baja Tensión"],
     photos: [
-      "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=800&auto=format",
-      "https://images.unsplash.com/photo-1581093057305-f8f1c1d8c8c0?w=800&auto=format",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format",
+      "/public/plc1.jpeg",
+      "/public/plc2.jpg",
+      
     ],
   },
 ];

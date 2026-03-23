@@ -5,11 +5,11 @@ export const skillsData = [
     icon: "⚙️",
     color: "#00b4d8",
     items: [
-      { name: "SCADA (WOIS)", level: 95 },
-      { name: "DCS", level: 85 },
+      { name: "SCADA (WOIS)", level: 99 },
+      { name: "DCS", level: 90 },
       { name: "HMI Development", level: 90 },
-      { name: "Wescplorer", level: 85 },
-      { name: "PLC Programming", level: 88 },
+      { name: "Wescplorer", level: 99 },
+      { name: "PLC Programming", level: 90 },
     ],
   },
   {
@@ -19,8 +19,8 @@ export const skillsData = [
     items: [
       { name: "Modbus TCP/RTU", level: 92 },
       { name: "Profibus", level: 80 },
-      { name: "OPC-UA", level: 75 },
-      { name: "Industrial Ethernet", level: 85 },
+      { name: "OPC-UA", level: 99 },
+      { name: "Industrial Ethernet", level: 95 },
     ],
   },
   {
@@ -28,11 +28,11 @@ export const skillsData = [
     icon: "⚡",
     color: "#22c55e",
     items: [
-      { name: "Motores Wartsila 50DF", level: 90 },
-      { name: "Turbinas a Vapor", level: 82 },
-      { name: "Calderas Acuotubulares", level: 80 },
+      { name: "Motores Wartsila 50DF", level: 100 },
+      { name: "Turbinas a Vapor", level: 90 },
+      { name: "Calderas Acuotubulares", level: 85 },
       { name: "Parque Solar / Subestaciones", level: 85 },
-      { name: "Alta y Media Tensión", level: 78 },
+      { name: "Alta y Media Tensión", level: 95 },
     ],
   },
   {
@@ -40,10 +40,10 @@ export const skillsData = [
     icon: "🌐",
     color: "#8b5cf6",
     items: [
-      { name: "Cisco Networking (CCNA)", level: 85 },
-      { name: "Windows Server", level: 82 },
-      { name: "VLAN Segmentation", level: 88 },
-      { name: "Cybersecurity OT", level: 72 },
+      { name: "Cisco Networking (CCNA)", level: 95 },
+      { name: "Windows Server", level: 95 },
+      { name: "VLAN Segmentation", level: 95 },
+      { name: "Cybersecurity OT", level: 85 },
     ],
   },
   {
@@ -51,10 +51,10 @@ export const skillsData = [
     icon: "💻",
     color: "#ec4899",
     items: [
-      { name: "React", level: 80 },
-      { name: "C# / .NET", level: 75 },
+      { name: "React", level: 85 },
+      { name: "C# / .NET", level: 85 },
       { name: "JavaScript", level: 78 },
-      { name: "SQL Server / Power BI", level: 72 },
+      { name: "SQL Server / Power BI", level: 90 },
       { name: "Node.js", level: 65 },
     ],
   },
@@ -63,10 +63,10 @@ export const skillsData = [
     icon: "🛠️",
     color: "#f97316",
     items: [
-      { name: "SAP", level: 75 },
-      { name: "Scrum / Agile", level: 80 },
-      { name: "Microsoft Project", level: 78 },
-      { name: "Git / GitHub", level: 80 },
+      { name: "SAP", level: 85 },
+      { name: "Scrum / Agile", level: 95 },
+      { name: "Microsoft Project", level: 95 },
+      { name: "Git / GitHub", level: 85 },
     ],
   },
 ];
