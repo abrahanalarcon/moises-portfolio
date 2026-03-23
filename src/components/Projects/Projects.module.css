@@ -1,0 +1,302 @@
+/* src/components/Projects/Projects.module.css */
+
+.projectsSection {
+  background: var(--bg-primary);
+}
+
+/* Filter tabs */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filterBtn {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-secondary);
+  padding: 0.5rem 1.1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  color: var(--accent-cyan);
+  border-color: var(--border-primary);
+  background: var(--accent-cyan-dim);
+}
+
+.filterActive {
+  color: var(--accent-cyan) !important;
+  border-color: var(--accent-cyan) !important;
+  background: var(--accent-cyan-dim) !important;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.15);
+}
+
+.countLabel {
+  margin-bottom: 2rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  animation-delay: var(--delay, 0s);
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--card-color, var(--accent-cyan));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.card:hover {
+  border-color: var(--card-color, var(--accent-cyan));
+  background: var(--bg-card-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 24px rgba(0, 180, 216, 0.08);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Corner decorations */
+.corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--border-secondary);
+  border-style: solid;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover .corner {
+  border-color: var(--card-color, var(--accent-cyan));
+}
+
+.tl { top: 6px; left: 6px; border-width: 1px 0 0 1px; }
+.tr { top: 6px; right: 6px; border-width: 1px 1px 0 0; }
+.bl { bottom: 6px; left: 6px; border-width: 0 0 1px 1px; }
+.br { bottom: 6px; right: 6px; border-width: 0 1px 1px 0; }
+
+/* Card header */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardIcon {
+  font-size: 1.75rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 8px rgba(0, 180, 216, 0.3));
+}
+
+.cardStatus {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.statusPip {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Card body */
+.cardBody {
+  flex: 1;
+}
+
+.cardCategory {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--card-color, var(--accent-cyan));
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.cardSubtitle {
+  font-size: 0.78rem;
+  color: var(--card-color, var(--accent-cyan));
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.cardDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Tags */
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--tag-color, var(--text-muted));
+  background: rgba(0, 180, 216, 0.05);
+  border: 1px solid rgba(0, 180, 216, 0.15);
+  padding: 0.18rem 0.5rem;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+
+/* Links */
+.cardLinks {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-secondary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.linkBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.linkBtnPrimary {
+  color: var(--btn-color, var(--accent-cyan)) !important;
+  border-color: var(--btn-color, var(--accent-cyan)) !important;
+  background: transparent;
+}
+
+.linkBtnPrimary:hover {
+  background: rgba(0, 180, 216, 0.1) !important;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.2);
+}
+
+/* GitHub CTA */
+.githubCta {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  background: var(--bg-card);
+  flex-wrap: wrap;
+}
+
+.ctaText {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--bg-primary);
+  background: var(--accent-cyan);
+  padding: 0.7rem 1.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ctaBtn:hover {
+  background: #00d4f8;
+  box-shadow: 0 0 24px var(--accent-cyan-glow);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .githubCta {
+    flex-direction: column;
+    text-align: center;
+  }
+}

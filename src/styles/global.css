@@ -1,0 +1,240 @@
+/* =====================================================
+   GLOBAL STYLES — SCADA Industrial Theme
+   Palette: Deep dark + cyan accent + amber warning + grid lines
+   ===================================================== */
+
+:root {
+  /* Colors */
+  --bg-primary: #080c10;
+  --bg-secondary: #0d1117;
+  --bg-panel: #111820;
+  --bg-card: #141c26;
+  --bg-card-hover: #1a2535;
+
+  --accent-cyan: #00b4d8;
+  --accent-cyan-dim: rgba(0, 180, 216, 0.15);
+  --accent-cyan-glow: rgba(0, 180, 216, 0.4);
+  --accent-amber: #f59e0b;
+  --accent-amber-dim: rgba(245, 158, 11, 0.15);
+  --accent-green: #22c55e;
+  --accent-red: #ef4444;
+
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --text-accent: #00b4d8;
+
+  --border-primary: rgba(0, 180, 216, 0.2);
+  --border-secondary: rgba(148, 163, 184, 0.08);
+  --border-panel: rgba(0, 180, 216, 0.35);
+
+  /* Typography */
+  --font-display: 'Rajdhani', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Exo 2', sans-serif;
+
+  /* Spacing */
+  --section-padding: 6rem 0;
+  --container-max: 1200px;
+
+  /* Effects */
+  --shadow-cyan: 0 0 30px rgba(0, 180, 216, 0.2);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --glow-text: 0 0 20px rgba(0, 180, 216, 0.5);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-mid: 0.35s ease;
+  --transition-slow: 0.6s ease;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* SCADA grid background overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 180, 216, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 216, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scanline effect */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Shared Utilities ---- */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: 3.5rem;
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-tag::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--accent-cyan);
+}
+
+.section-tag::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--accent-cyan), transparent);
+  max-width: 120px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.section-title span {
+  color: var(--accent-cyan);
+}
+
+/* Panel / card base */
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-cyan), transparent);
+}
+
+/* Corner decoration — SCADA UI style */
+.panel-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--accent-cyan);
+  border-style: solid;
+}
+
+.panel-corner.tl { top: 4px; left: 4px; border-width: 1px 0 0 1px; }
+.panel-corner.tr { top: 4px; right: 4px; border-width: 1px 1px 0 0; }
+.panel-corner.bl { bottom: 4px; left: 4px; border-width: 0 0 1px 1px; }
+.panel-corner.br { bottom: 4px; right: 4px; border-width: 0 1px 1px 0; }
+
+/* Status dot */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+  animation: pulse-dot 2s infinite;
+  display: inline-block;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent-green); }
+  50% { opacity: 0.6; box-shadow: 0 0 16px var(--accent-green); }
+}
+
+/* Monospace accent text */
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-primary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
+
+/* Selection */
+::selection { background: var(--accent-cyan-dim); color: var(--accent-cyan); }
+
+/* Links reset */
+a { color: inherit; text-decoration: none; }
+
+/* Image */
+img { display: block; max-width: 100%; }
+
+/* Fade-in on scroll base */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
