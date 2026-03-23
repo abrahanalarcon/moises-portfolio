@@ -44,7 +44,7 @@ export const experienceData = [
     ],
     tags: ["SCADA (WOIS)", "DCS", "Modbus TCP/RTU", "Profibus", "PLC-HMI", "Wartsila 50DF", "SAP"],
     photos: [
-      "/public/cfc.jpg",
+      "/cfc.jpg",
       "/public/proteccion-c.jpg",
       "/public/network.jpeg",
       "/public/panel.jpg",
