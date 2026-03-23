@@ -71,10 +71,10 @@ export const experienceData = [
     ],
     tags: ["SCADA", "HMI", "PLC", "Redes Industriales", "Turbinas", "Solar"],
     photos: [
-      "/public/foto de perfil.jpg",
-      "/public/LDU.jpg",
-      "/public/Q1 Q2 poewr plant.jpeg",
-      "/public/con cristofer.jpg",
+      "/foto de perfil.jpg",
+      "/LDU.jpg",
+      "/Q1 Q2 poewr plant.jpeg",
+      "/con cristofer.jpg",
     ],
   },
   {
@@ -95,8 +95,8 @@ export const experienceData = [
     ],
     tags: ["PLC", "HMI", "Modbus RTU/TCP", "Manufactura", "Baja Tensión"],
     photos: [
-      "/public/plc1.jpeg",
-      "/public/plc2.jpg",
+      "/plc1.jpeg",
+      "/plc2.jpg",
       
     ],
   },
