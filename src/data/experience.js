@@ -50,7 +50,6 @@ export const experienceData = [
       "/public/panel.jpg",
       "/public/sala de control.jpg",
       "/public/main.jpg",
-      "/public/rampa de gas.jpg",
       "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&auto=format",
     ],
   },
