@@ -127,7 +127,7 @@ export default function Hero() {
           </h2>
 
           <p className={styles.bio}>
-            IT/OT Engineer con más de 3 años de experiencia en entornos industriales.
+            IT/OT Engineer con más de 5 años de experiencia en entornos industriales.
             Especialista en <strong>SCADA, redes industriales y automatización</strong> de plantas
             de generación eléctrica. Integro tecnología IT con sistemas operacionales (OT)
             para optimizar procesos críticos.
