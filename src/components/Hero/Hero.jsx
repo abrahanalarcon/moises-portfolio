@@ -61,7 +61,7 @@ function ScadaHud() {
     <div className={styles.scadaHud}>
       <div className={styles.hudHeader}>
         <span className={styles.statusDot}></span>
-        <span>QUISQUEYA II — CTRL ROOM LIVE</span>
+        <span>SIMULATION — CONTROL ROOM LIVE</span>
       </div>
       <div className={styles.hudGrid}>
         <div className={styles.hudCell}>
@@ -166,7 +166,7 @@ export default function Hero() {
           {/* Stats */}
           <div className={styles.stats}>
             {[
-              { value: '3+', label: 'AÑOS\nEXPERIENCIA' },
+              { value: '5+', label: 'AÑOS\nEXPERIENCIA' },
               { value: '225', label: 'MW\nSOLAR' },
               { value: '12×', label: 'MOTORES\nWARTSILA' },
               { value: 'CCNA', label: 'CISCO\nCERTIFIED' },

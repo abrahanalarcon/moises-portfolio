@@ -72,15 +72,16 @@ export const skillsData = [
 ];
 
 export const certifications = [
-  { name: "Programación y Diagramas PLC", issuer: "Instituto ITI Quezada", color: "#00b4d8" },
-  { name: "HMI SCADA", issuer: "Udemy", color: "#00b4d8" },
-  { name: "Power System Protection Fundamentals", issuer: "Udemy", color: "#f59e0b" },
-  { name: "Seguridad Eléctrica NFPA 70E", issuer: "ASRY / Ege Haina", color: "#f59e0b" },
-  { name: "CCNA: Introduction to Networks", issuer: "Cisco / Infotep", color: "#22c55e" },
-  { name: "CCNA 2: Enrutamiento y Conmutación", issuer: "Cisco / Infotep", color: "#22c55e" },
-  { name: "CCNA 3: Redes Empresariales", issuer: "Infotep", color: "#22c55e" },
-  { name: "Scrum y Metodologías Ágiles", issuer: "ITLA", color: "#8b5cf6" },
-  { name: "Administración Windows Server", issuer: "ITLA", color: "#8b5cf6" },
-  { name: "SQL Server & Power BI Data Analyst", issuer: "Udemy", color: "#ec4899" },
-  { name: "Fresadora CNC", issuer: "Infotep", color: "#f97316" },
+  { name: "Programación y Diagramas PLC", issuer: "Instituto ITI Quezada", color: "#00b4d8", category: "industrial" },
+  { name: "HMI SCADA", issuer: "Udemy", color: "#00b4d8", category: "industrial" },
+  { name: "Power System Protection Fundamentals", issuer: "Udemy", color: "#f59e0b", category: "power" },
+  { name: "Seguridad Eléctrica NFPA 70E", issuer: "ASRY / Ege Haina", color: "#f59e0b", category: "power" },
+  { name: "CCNA: Introduction to Networks", issuer: "Cisco / Infotep", color: "#22c55e", category: "networks" },
+  { name: "CCNA 2: Enrutamiento y Conmutación", issuer: "Cisco / Infotep", color: "#22c55e", category: "networks" },
+  { name: "CCNA 3: Redes Empresariales", issuer: "Infotep", color: "#22c55e", category: "networks" },
+  { name: "Scrum y Metodologías Ágiles", issuer: "ITLA", color: "#8b5cf6", category: "software" },
+  { name: "Administración Windows Server", issuer: "ITLA", color: "#8b5cf6", category: "networks" },
+  { name: "SQL Server & Power BI Data Analyst", issuer: "Udemy", color: "#ec4899", category: "software" },
+  { name: "Programación Fresadora CNC", issuer: "Infotep", color: "#f97316", category: "industrial" },
+  { name: "Responsive Web Site Development", issuer: "UDEMY", color: "#8b5cf6", category: "software" },
 ];

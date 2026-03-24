@@ -55,7 +55,7 @@ export const projectsData = [
     description:
       "Pokédex interactivo multiplataforma (Android, iOS, Windows) construido con .NET MAUI. Acceso a más de 1,000 Pokémon desde la API oficial.",
     tags: [".NET MAUI", "C#", "Android", "iOS", "REST API"],
-    category: "mobile",
+    category: "Multiplatform",
     links: {
       github: "https://github.com/abrahanalarcon/Validation-Email",
     },
@@ -70,7 +70,7 @@ export const projectsData = [
     description:
       "Clon de la interfaz de Spotify desarrollado con .NET MAUI, replicando los patrones de navegación y UI del player de música.",
     tags: [".NET MAUI", "C#", "XAML", "Mobile UI"],
-    category: "mobile",
+    category: "Multiplatform",
     links: {
       github: "https://github.com/abrahanalarcon/Clon-Spotify",
     },
@@ -99,5 +99,5 @@ export const projectCategories = [
   { id: "all", label: "ALL SYSTEMS" },
   { id: "industrial", label: "INDUSTRIAL" },
   { id: "web", label: "WEB" },
-  { id: "mobile", label: "MOBILE" },
+  { id: "Multiplatform", label: "MULTIPLATFORM" },
 ];

@@ -88,13 +88,30 @@ function SkillGroup({ group, index }) {
   );
 }
 
+const CERT_FILTERS = [
+  { id: 'all',        label: 'ALL' },
+  { id: 'industrial', label: 'INDUSTRIAL' },
+  { id: 'power',      label: 'POWER' },
+  { id: 'networks',   label: 'NETWORKS' },
+  { id: 'software',   label: 'SOFTWARE' },
+];
+
+
+
 export default function Skills() {
   const headerRef = useScrollReveal();
   const certsRef = useScrollReveal();
+  const [certFilter, setCertFilter] = useState('all');
+
+const filteredCerts = certFilter === 'all'
+    ? certifications
+    : certifications.filter((c) => c.category === certFilter);
 
   return (
     <section className={`section ${styles.skillsSection}`} id="skills">
       <div className="container">
+
+        {/* Section Header */}
         <div ref={headerRef} className="section-header fade-up">
           <div className="section-tag">COMPETENCIAS</div>
           <h2 className="section-title">
@@ -102,32 +119,52 @@ export default function Skills() {
           </h2>
         </div>
 
+            {/* Skills grid — sin cambios */}
         <div className={styles.skillsGrid}>
           {skillsData.map((group, i) => (
             <SkillGroup key={group.category} group={group} index={i} />
           ))}
         </div>
 
-        <div ref={certsRef} className={`${styles.certsSection} fade-up`}>
-          <h3 className={styles.certsTitle}>
-            <span className={styles.mono}>// </span>Certificaciones &amp; Diplomados
-          </h3>
-          <div className={styles.certsGrid}>
-            {certifications.map((cert, i) => (
-              <div
-                key={cert.name}
-                className={styles.certCard}
-                style={{ '--cert-color': cert.color }}
-              >
-                <div className={styles.certDot} style={{ background: cert.color }} />
-                <div>
-                  <p className={styles.certName}>{cert.name}</p>
-                  <p className={styles.certIssuer}>{cert.issuer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+           {/* Certifications con filtro */}
+       {/* Certifications con filtro */}
+<div ref={certsRef} className={`${styles.certsSection} fade-up`}>
+  <h3 className={styles.certsTitle}>
+    <span className={styles.mono}>// </span>Certificaciones & Diplomados
+  </h3>
+
+  {/* Filtros */}
+  <div className={styles.certFilters}>
+    {CERT_FILTERS.map((f) => (
+      <button
+        key={f.id}
+        className={`${styles.filterBtn} ${
+          certFilter === f.id ? styles.filterActive : ''
+        }`}
+        onClick={() => setCertFilter(f.id)}
+      >
+        {f.label}
+      </button>
+    ))}
+  </div>
+
+  {/* Grid filtrado */}
+  <div className={styles.certsGrid}>
+    {filteredCerts.map((cert, i) => (
+      <div
+        key={cert.name}
+        className={styles.certCard}
+        style={{ '--cert-color': cert.color }}
+      >
+        <div className={styles.certDot} style={{ background: cert.color }} />
+        <div>
+          <p className={styles.certName}>{cert.name}</p>
+          <p className={styles.certIssuer}>{cert.issuer}</p>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
 
         <div className={styles.badgeRow}>
           {['SCADA','DCS','PLC','HMI','Modbus','Profibus','OPC-UA','Cisco','React','C#','.NET','SQL','CCNA','SAP','Scrum'].map((b) => (

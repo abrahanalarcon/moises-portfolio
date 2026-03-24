@@ -20,9 +20,9 @@ export const experienceData = [
     tags: ["Windows Server", "Cisco", "APIs", "Scrum", "Networks"],
     // Unsplash industrial/IT images — substitute with your own photos
     photos: [
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format",
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d4?w=800&auto=format",
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format",
+      "\servidor1.jfif",
+      "\servidor2.jfif",
+      
     ],
   },
   {

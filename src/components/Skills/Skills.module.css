@@ -254,3 +254,41 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Cert filters ── */
+.certFilters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.filterBtn {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  color: var(--accent-cyan);
+  border-color: var(--border-primary);
+  background: var(--accent-cyan-dim);
+}
+
+.filterActive {
+  color: var(--accent-cyan) !important;
+  border-color: var(--accent-cyan) !important;
+  background: var(--accent-cyan-dim) !important;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.15);
+}
+
+.certCount {
+  margin-bottom: 1.25rem;
+}
