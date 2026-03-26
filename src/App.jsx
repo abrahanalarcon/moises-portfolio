@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import ExperienceTimeline from './components/ExperienceTimeline/ExperienceTimeline';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <ExperienceTimeline />
         <Experience />
         <Projects />
         <Skills />
