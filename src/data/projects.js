@@ -32,22 +32,7 @@ export const projectsData = [
     icon: "🎬",
     status: "LIVE",
   },
-  {
-    id: "cryptocurrencies",
-    title: "Crypto Dashboard",
-    subtitle: "Real-time Market Data",
-    description:
-      "Dashboard de criptomonedas con datos en tiempo real usando Styled Components y custom hooks. Integración con CryptoCompare API para datos de mercado.",
-    tags: ["React", "Styled Components", "Custom Hooks", "CryptoCompare API"],
-    category: "web",
-    links: {
-      live: "https://excryptocurrenciesreact.netlify.app/",
-      github: "https://github.com/abrahanalarcon/criptos-react",
-    },
-    color: "#22c55e",
-    icon: "₿",
-    status: "LIVE",
-  },
+ 
   {
     id: "pokedex-maui",
     title: "Pokédex MAUI",
@@ -63,21 +48,7 @@ export const projectsData = [
     icon: "📱",
     status: "BUILD",
   },
-  {
-    id: "spotify-clone",
-    title: "Spotify Clone",
-    subtitle: ".NET MAUI Mobile App",
-    description:
-      "Clon de la interfaz de Spotify desarrollado con .NET MAUI, replicando los patrones de navegación y UI del player de música.",
-    tags: [".NET MAUI", "C#", "XAML", "Mobile UI"],
-    category: "Multiplatform",
-    links: {
-      github: "https://github.com/abrahanalarcon/Clon-Spotify",
-    },
-    color: "#00b4d8",
-    icon: "🎵",
-    status: "BUILD",
-  },
+
   {
     id: "industrial-monitoring",
     title: "Industrial Monitoring Dashboard",
@@ -88,6 +59,7 @@ export const projectsData = [
     category: "industrial",
     links: {
       github: "https://github.com/abrahanalarcon",
+      live: "https://coruscating-entremet-75bfe1.netlify.app/",
     },
     color: "#f59e0b",
     icon: "📊",

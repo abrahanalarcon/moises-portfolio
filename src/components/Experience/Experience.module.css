@@ -6,7 +6,7 @@
 
 .headerSub {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: var(--text-muted);
   margin-top: 0.5rem;
   letter-spacing: 0.05em;
