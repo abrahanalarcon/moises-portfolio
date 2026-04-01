@@ -4,6 +4,7 @@ import styles from './Hero.module.css';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const TYPING_LINES = [
+  'Instrumentation and control',
   'IT/OT Engineer',
   'SCADA & Industrial Control Systems',
   'Industrial Automation Specialist',
