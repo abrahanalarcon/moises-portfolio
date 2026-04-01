@@ -13,11 +13,13 @@ export const aboutData = {
   ],
   
   photos: [
-    { src: "/cfc.jpg",                  caption: "Instrumentación de campo — Ege Haina"  },
+    { src: "/cfc.jpg",                  caption: "Ingenieria en Control — Ege Haina"  },
     { src: "/Sala de maquina.jpeg",     caption: "Sala de máquinas — Quisqueya II"       },
     { src: "/Q1 Q2 poewr plant.jpeg",   caption: "Central eléctrica Q1 & Q2"             },
-    { src: "/sultana.jpg",              caption: "Trabajo en equipo — Campo"             },
+    { src: "/sultana.jpg",              caption: "Panorama"             },
     { src: "/sala de control.jpg",      caption: "Sala de control — SCADA WOIS"         },
     { src: "/rampa de gas.jpg",      caption: "Rampa de gas — Campo"         },
+    { src: "/main.jpg",      caption: "Sobre mi"         },
+    { src: "/cableado.jpg",      caption: "Redes Industriales"         },
   ],
 };
