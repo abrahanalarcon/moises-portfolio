@@ -5,6 +5,7 @@ export const skillsData = [
     icon: "⚙️",
     color: "#00b4d8",
     items: [
+      { name: "TIA PORTAL,WINCC", level: 99 },
       { name: "SCADA (WOIS)", level: 99 },
       { name: "DCS", level: 90 },
       { name: "HMI Development", level: 90 },
@@ -40,6 +41,7 @@ export const skillsData = [
     icon: "🌐",
     color: "#8b5cf6",
     items: [
+      { name: "Fortigate", level: 95 },
       { name: "Cisco Networking (CCNA)", level: 95 },
       { name: "Windows Server", level: 95 },
       { name: "VLAN Segmentation", level: 95 },

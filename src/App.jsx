@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import ExperienceTimeline from './components/ExperienceTimeline/ExperienceTimeline';
 import About from './components/About/About';
 
+
 export default function App() {
   return (
     <>
